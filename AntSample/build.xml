@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     2012/09/26 1:06:13                                                        
+
+     AntSample    
+     this is the ant build test.
+                   
+     kzk                                                                
+     ====================================================================== -->
+<project name="AntSample" default="compile">
+    <description>
+            this is the ant build test.
+    </description>
+	
+	<property name="source" value="src"/>
+	<property name="classes" value="classes"/>
+
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="default" description="this is the ant build test.">
+		<mkdir dir="${classes}"/>  
+    </target>
+	
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: compile                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="compile" depends="default">
+    	<javac srcdir="${source}" destdir="${classes}" excludesfile="build.xml"/>
+    </target>
+
+
+</project>

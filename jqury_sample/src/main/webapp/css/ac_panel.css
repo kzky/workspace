@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+dl {
+	width: 400px;
+	margin: 50px auto;
+}
+
+dl dt {
+	background: #7CADB6;
+	border-bottom: 1px solid #FFFFFF;
+	cursor: pointer;
+}
+
+dl dd {
+	border: 1px solid #7CADB6;
+	border-top: none;
+	height: 300px;
+}

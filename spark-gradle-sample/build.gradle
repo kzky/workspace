@@ -1,0 +1,57 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'eu.appsatori:gradle-fatjar-plugin:0.3'
+    }
+
+}
+
+apply plugin: 'eu.appsatori.fatjar'
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repository.cloudera.com/artifactory/cloudera-repos"
+    }
+}
+
+configurations {
+    //all*.exclude group: 'org.eclipse.jetty'
+}
+
+dependencies {
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+    compile 'org.scala-lang:scala-library:2.10.4'
+//    compile group: 'org.apache.hadoop', name: 'hadoop-client', version: '2.5.0-cdh5.3.0'
+    compile group: 'org.apache.spark', name: 'spark-core_2.10', version: '1.2.0-cdh5.3.0'
+	compile group: 'org.apache.spark', name: 'spark-graphx_2.10', version: '1.2.0-cdh5.3.0'
+	compile group: 'org.apache.spark', name: 'spark-streaming_2.10', version: '1.2.0-cdh5.3.0'
+    compile group: 'org.apache.spark', name: 'spark-yarn_2.10', version: '1.1.0-cdh5.2.0-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
+}

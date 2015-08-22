@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd">
+
+
+	<!-- properties -->
+	<context:property-placeholder location="classpath:properties/job.properties" />
+
+	<!-- beans -->
+	<bean id="basicDriver" name="basicDriver"
+		class="edu.kzk.hadoop_sample.driver.impl.CustomizableDriver" scope="singleton">
+
+		<!-- job config -->
+		<property name="jobName">
+			<value>${jobName}</value>
+		</property>
+		<property name="mapperOutputKeyClassName">
+			<value>${mapperOutputKeyClassName}</value>
+		</property>
+		<property name="mapperOutputValueClassName">
+			<value>${mapperOutputValueClassName}</value>
+		</property>
+		<property name="reducerOutputKeyClassName">
+			<value>${reducerOutputKeyClassName}</value>
+		</property>
+		<property name="reducerOutputValueClassName">
+			<value>${reducerOutputValueClassName}</value>
+		</property>
+		<property name="inputFormatClassName">
+			<value>${inputFormatClassName}</value>
+		</property>
+		<property name="outputFormatClassName">
+			<value>${outputFormatClassName}</value>
+		</property>
+		<property name="mapperClassName">
+			<value>${mapperClassName}</value>
+		</property>
+		<property name="partitionerClassName">
+			<value>${partitionerClassName}</value>
+		</property>
+		<property name="combinerClassName">
+			<value>${combinerClassName}</value>
+		</property>
+		<property name="reducerClassName">
+			<value>${reducerClassName}</value>
+		</property>
+		<property name="numReducer">
+			<value>${numReducer}</value>
+		</property>
+
+		<!-- site config -->
+		<property name="yarnAppMapreduceAmResourceMb">
+			<value>${yarn.app.mapreduce.am.resource.mb}</value>
+		</property>
+		<property name="mapreduceJobMaps">
+			<value>${mapreduce.job.maps}</value>
+		</property>
+		<property name="mapreduceJobReduces">
+			<value>${mapreduce.job.reduces}</value>
+		</property>
+
+
+		<!-- map/reduce-side config -->
+		<property name="mapreduceTaskIoSortMb">
+			<value>${mapreduce.task.io.sort.mb}</value>
+		</property>
+		<property name="mapreduceTaskIoSortFactor">
+			<value>${mapreduce.task.io.sort.factor}</value>
+		</property>
+		<property name="mapreduceMapMemoryMb">
+			<value>${mapreduce.map.memory.mb}</value>
+		</property>
+		<property name="mapreduceMapJavaOpts">
+			<value>${mapreduce.map.java.opts}</value>
+		</property>
+		<property name="mapreduceMapSortSpillPercent">
+			<value>${mapreduce.map.sort.spill.percent}</value>
+		</property>
+		<property name="mapreduceReduceMemoryMb">
+			<value>${mapreduce.reduce.memory.mb}</value>
+		</property>
+		<property name="mapreduceReduceJavaOpts">
+			<value>${mapreduce.reduce.java.opts}</value>
+		</property>
+		<property name="mapreduceReduceMergeInmemThreshold">
+			<value>${mapreduce.reduce.merge.inmem.threshold}</value>
+		</property>
+		<property name="mapreduceReduceInputBufferPercent">
+			<value>${mapreduce.reduce.input.buffer.percent}</value>
+		</property>
+		<property name="mapreduceReduceShuffleInputBufferPercent">
+			<value>${mapreduce.reduce.shuffle.input.buffer.percent}</value>
+		</property>
+		<property name="mapreduceReduceShuffleMergePercent">
+			<value>${mapreduce.reduce.shuffle.merge.percent}</value>
+		</property>
+		<!-- splitter config -->
+		<property name="splitterClassName">
+			<value>${splitterClassName}</value>
+		</property>
+		<property name="indices">
+			<value>${indices}</value>
+		</property>
+		<property name="delimiter">
+			<value>${delimiter}</value>
+		</property>
+	</bean>
+</beans>

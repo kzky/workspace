@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<bean id="parent" scope="singleton" class="edu.kzk.spring_sample.extended_singleton.Parent">
+	<property name="var" value="parent"/>
+	</bean>
+	
+
+	<bean id="child" scope="prototype" parent="parent" class="edu.kzk.spring_sample.extended_singleton.Child">
+	<property name="var" value="child"/>
+	</bean>
+	 	
+ 	<!-- 
+ 	<bean id="child" scope="singleton" class="edu.kzk.spring_sample.extended_singleton.Child">
+	<property name="var" value="child"/>
+	</bean>
+	 -->
+</beans>

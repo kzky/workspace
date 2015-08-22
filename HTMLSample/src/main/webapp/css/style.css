@@ -1,0 +1,30 @@
+body {
+    width:960px;
+    margin:20px auto;
+}
+header, nav, section, footer {
+    display:block;
+    border:1px solid #ccc;
+    margin:5px;
+    padding:20px;
+}
+header {
+    text-align:center;
+    padding:30px;
+}
+header ul, header li {
+    list-style-type:none;
+    display:inline;
+}
+nav {
+    float:right;
+    width:236px;
+}
+section {
+    float:right;
+    width:620px;
+}
+footer {
+    clear:both !important;
+    text-align: center;
+}

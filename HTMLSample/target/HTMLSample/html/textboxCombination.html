@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="JavaScript">
+<!--
+	function calc() {
+	}
+	function say() {
+		var result = document.frm1.numApple.value * 100;
+		document.frm1.result.value = reuslt;
+	}
+	function func2(){
+		var result = document.frm2.txtKosuu.value * 100
+   		document.frm2.txtPrice.value = result;
+	}
+	function windowopen() {
+		var result = window.open("./hello.html")
+		alert(result.document.getElementById("text").value)
+		chisato = result.document.frm.text
+		alert(chisato)
+	}
+//-->
+</script>
+<title>textbox combination</title>
+</head>
+<body>
+
+	<form name="frm1">
+		apple(s): 100 yen x <input type="text" name="numApple">個 <input
+			type="button" value="calc" onclick="say()"> <br> <input
+			type="text" name="result">
+	</form>
+	<form name=frm2>
+		林檎 100円 * <input type=text name=txtKosuu>個 <input type=button
+			value="計算" onClick="func2()"><br> <br> 合計金額は<input
+			type=text name=txtPrice>円になります(￣～￣)ξ<br> <br>
+	</form>
+	
+	<form name=frm3>
+		<input type="button" name="button" onclick="windowopen()" value="openwindow">
+	</form>
+</body>
+</html>

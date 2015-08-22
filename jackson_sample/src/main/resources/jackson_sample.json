@@ -1,0 +1,12 @@
+[{
+  "name" : { "first" : "太郎", "last" : "技評" }, 
+  "mail" : "taro@example.jp"
+}, 
+{
+  "name" : { "first" : "次郎", "last" : "技術" }, 
+  "mail" : "jiro@example.jp"
+}, 
+{
+  "name" : { "first" : "花子", "last" : "評論" }, 
+  "mail" : "hanako@example.jp"
+}]

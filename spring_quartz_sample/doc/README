@@ -1,0 +1,7 @@
+maven2.0 + spring3.1.2 + servlet3.0 + quartz1.8.6
+
+他のdependencyライブラリは，pom.xmlを参照
+
+１．servlet起動時にspringでBeanファイルを読み込み初期値化
+２．１の際に，DIでQuartzJob -> Trigger -> Factoryが作られて，5秒毎に時刻を表示
+

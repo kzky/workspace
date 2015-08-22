@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<!-- Properties -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>properties/db.properties</value>
+		</property>
+	</bean>
+
+	<!-- DataSource -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>${jdbc.diverClassName}</value>
+		</property>
+
+		<property name="url">
+			<value>${jdbc.url}</value>
+		</property>
+
+		<property name="username">
+			<value>${jdbc.username}</value>
+		</property>
+
+		<property name="password">
+			<value>${jdbc.password}</value>
+		</property>
+	</bean>
+
+	<!-- sessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>org.kzk.SpringHibernateAnnotationSample.pojo.Book</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- transactionManager -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- Dao -->
+	<bean id="bookDao" class="org.kzk.SpringHibernateAnnotationSample.dao.BookDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- Transaction Target -->
+	<bean id="bookServiceTarget"
+		class="org.kzk.SpringHibernateAnnotationSample.service.BookServiceImpl">
+		<property name="bookDao">
+			<ref local="bookDao" />
+		</property>
+	</bean>
+
+	<!-- TransactionProxyFactoryBean -->
+	<bean id="bookService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref local="transactionManager" />
+		</property>
+
+		<property name="target">
+			<ref local="bookServiceTarget" />
+		</property>
+
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

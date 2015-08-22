@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="child" scope="singleton" parent="parent" class="edu.kzk.spring_sample.init_method.Child" init-method="init_child">
+		<property name="var" value="child"/>
+	</bean>
+		
+	<bean id="parent" scope="singleton" class="edu.kzk.spring_sample.init_method.Parent" init-method="init_parent" depends-on="child">
+		<property name="var" value="parent"/>
+	</bean>
+	
+
+</beans>
