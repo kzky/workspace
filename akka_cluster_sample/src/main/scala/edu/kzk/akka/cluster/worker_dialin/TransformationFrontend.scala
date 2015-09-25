@@ -1,12 +1,7 @@
 package edu.kzk.akka.cluster.worker_dialin
 
-import java.util.concurrent.atomic.AtomicInteger
-
+import language.postfixOps
 import scala.concurrent.duration._
-import scala.language.postfixOps
-
-import com.typesafe.config.ConfigFactory
-
 import akka.actor.Actor
 import akka.actor.ActorRef
 import akka.actor.ActorSystem
@@ -14,6 +9,9 @@ import akka.actor.Props
 import akka.actor.Terminated
 import akka.pattern.ask
 import akka.util.Timeout
+import com.typesafe.config.ConfigFactory
+import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.atomic.AtomicInteger
 
 //#frontend
 class TransformationFrontend extends Actor {
