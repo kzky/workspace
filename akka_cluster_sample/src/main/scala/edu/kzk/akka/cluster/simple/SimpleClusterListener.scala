@@ -12,7 +12,7 @@ import akka.cluster.ClusterEvent.MemberUp
 import akka.cluster.ClusterEvent.UnreachableMember
 
 class SimpleClusterListener extends Actor with ActorLogging {
-
+	
 	val cluster = Cluster(context.system);
 
 	// subscribe to cluster changes, re-subscribe when restart 

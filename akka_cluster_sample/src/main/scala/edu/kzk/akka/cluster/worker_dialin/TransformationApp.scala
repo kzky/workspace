@@ -1,6 +1,6 @@
 package edu.kzk.akka.cluster.worker_dialin
 
-import edu.kzk.akka.cluster.worker_dialinx.TransformationBackend
+import edu.kzk.akka.cluster.worker_dialin.TransformationBackend
 
 /**
  * @author kzk

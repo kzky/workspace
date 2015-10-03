@@ -1,4 +1,4 @@
-package edu.kzk.akka.cluster.worker_dialinx
+package edu.kzk.akka.cluster.worker_dialin
 
 import language.postfixOps
 import scala.concurrent.duration._

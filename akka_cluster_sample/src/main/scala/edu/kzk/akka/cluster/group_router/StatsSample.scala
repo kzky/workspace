@@ -67,6 +67,7 @@ class StatsSampleClient(servicePath: String) extends Actor {
   override def preStart(): Unit = {
     cluster.subscribe(self, classOf[MemberEvent], classOf[ReachabilityEvent])
   }
+  
   override def postStop(): Unit = {
     cluster.unsubscribe(self)
     tickTask.cancel()
