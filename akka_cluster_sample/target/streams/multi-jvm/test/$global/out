@@ -1,0 +1,3 @@
+[0m[[0minfo[0m] [0mPassed: Total 5, Failed 0, Errors 0, Passed 5[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	akka_cluster_sample.edu.kzk.akka.cluster.worker_dialin.TransformationSampleSpec[0m

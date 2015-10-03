@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/test/resources/org,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/test-classes/org)[0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/test/resources/org/gradle,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/test-classes/org/gradle)[0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/test/resources/org/gradle/test-resource.xml,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/test-classes/org/gradle/test-resource.xml)[0m

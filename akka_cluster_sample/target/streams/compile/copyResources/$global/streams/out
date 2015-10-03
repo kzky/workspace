@@ -1,0 +1,7 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/main/resources/stats1.conf,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/classes/stats1.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/main/resources/stats2.conf,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/classes/stats2.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/main/resources/org,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/classes/org)[0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/main/resources/application.conf,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/main/resources/org/gradle,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/classes/org/gradle)[0m
+[0m[[0mdebug[0m] [0m	(/home/kzk/git/workspace/akka_cluster_sample/src/main/resources/org/gradle/resource.xml,/home/kzk/git/workspace/akka_cluster_sample/target/scala-2.10/classes/org/gradle/resource.xml)[0m

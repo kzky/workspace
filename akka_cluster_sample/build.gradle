@@ -32,6 +32,12 @@ dependencies {
 
 test {
 	systemProperties 'property': 'value'
+	systemProperties 'multinode.max-nodes': '5'
+	systemProperties 'multinode.host': 'localhost'
+	//	systemProperties 'multinode.port': ''
+	systemProperties 'multinode.server-host': 'localhost'
+	systemProperties 'multinode.index': '1'
+
 }
 
 uploadArchives {

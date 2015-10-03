@@ -1,0 +1,4 @@
+project akka-sample-cluster-scala
+multi-jvm:test
+project akka-sample-cluster-scala
+multi-jvm:test

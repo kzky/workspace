@@ -1,0 +1,11 @@
+[0m[[0minfo[0m] [0m[32m* akka_cluster_sample.edu.kzk.akka.cluster.worker_dialin.TransformationSampleSpec[0m[0m
+[0m[[0mdebug[0m] [0mStarting JVM-1 for akka_cluster_sample.edu.kzk.akka.cluster.worker_dialin.TransformationSampleSpecMultiJvmNode1[0m
+[0m[[0mdebug[0m] [0m  with JVM options: -Dmultinode.max-nodes=5 -Dmultinode.server-host=localhost -Dmultinode.host=localhost -Dmultinode.index=0[0m
+[0m[[0mdebug[0m] [0mStarting JVM-2 for akka_cluster_sample.edu.kzk.akka.cluster.worker_dialin.TransformationSampleSpecMultiJvmNode2[0m
+[0m[[0mdebug[0m] [0m  with JVM options: -Dmultinode.max-nodes=5 -Dmultinode.server-host=localhost -Dmultinode.host=localhost -Dmultinode.index=1[0m
+[0m[[0mdebug[0m] [0mStarting JVM-3 for akka_cluster_sample.edu.kzk.akka.cluster.worker_dialin.TransformationSampleSpecMultiJvmNode3[0m
+[0m[[0mdebug[0m] [0m  with JVM options: -Dmultinode.max-nodes=5 -Dmultinode.server-host=localhost -Dmultinode.host=localhost -Dmultinode.index=2[0m
+[0m[[0mdebug[0m] [0mStarting JVM-4 for akka_cluster_sample.edu.kzk.akka.cluster.worker_dialin.TransformationSampleSpecMultiJvmNode4[0m
+[0m[[0mdebug[0m] [0m  with JVM options: -Dmultinode.max-nodes=5 -Dmultinode.server-host=localhost -Dmultinode.host=localhost -Dmultinode.index=3[0m
+[0m[[0mdebug[0m] [0mStarting JVM-5 for akka_cluster_sample.edu.kzk.akka.cluster.worker_dialin.TransformationSampleSpecMultiJvmNode5[0m
+[0m[[0mdebug[0m] [0m  with JVM options: -Dmultinode.max-nodes=5 -Dmultinode.server-host=localhost -Dmultinode.host=localhost -Dmultinode.index=4[0m

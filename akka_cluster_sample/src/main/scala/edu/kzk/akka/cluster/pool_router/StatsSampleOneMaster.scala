@@ -1,14 +1,13 @@
 package edu.kzk.akka.cluster.pool_router
 
 import com.typesafe.config.ConfigFactory
-
 import akka.actor.ActorSystem
 import akka.actor.PoisonPill
 import akka.actor.Props
-import akka.contrib.pattern.ClusterSingletonManager
-import akka.contrib.pattern.ClusterSingletonProxy
 import edu.kzk.akka.cluster.group_router.StatsSampleClient
 import edu.kzk.akka.cluster.group_router.StatsService
+import akka.cluster.singleton.ClusterSingletonProxy
+import akka.cluster.singleton.ClusterSingletonManager
 
 object StatsSampleOneMaster {
   def main(args: Array[String]): Unit = {
